@@ -1,34 +1,111 @@
+/* General font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@600&display=swap');
 
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Top header with social media links used in all pages with my images*/
+.top-header {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
 }
 
-a {
-  color: #00B7FF;
-}
-.card {
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.social-links {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
 }
 
-.card-img-top {
-  width: 100%;
-  height: 120px;
-  object-fit: contain;
-  background-color: #f9f9f9;
-  padding: 10px;
+.social-links img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
+.social-links img:hover {
+  transform: scale(1.2);
+}
 
+/*End of top header with social media links used in all pages*/
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Home my style comfiguration initial*/
+/* backgropund home color*/
+body.home-page {
+  background-color: #b6c5d0; /* Light blue-gray background used for all pages */
+  margin: 0;
+  font-family: "Poppins", nourd;
+ /* text-align: center;*/
+}
+.name { /*Fabiana Correa*/
+  font-size: 3.8rem;
+  font-weight: bold;
+  margin: 5px 0;
+  font-family: "Arial Black", sans-serif;
+  text-align: center;
+  }
+
+.title { /*Job title*/
+  font-size: 1.9rem;
+  color: #555;
+  font-family: "Poppins", nourd;
+  text-align: center;
+}
+.profile-photo {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+}
+.career-summary { 
+  max-width: 900px;
+  margin: 3% auto;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+.career-summary h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.nav-buttons { /* The standard button is used on all my pages */
+  text-align: center;
+  margin-top: 30px;
+}
+.nav-buttons button {
+  margin: 5px;
+  padding: 8px 18px;
+  border: none;
+  background-color: #007bff; 
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.nav-buttons button:hover {
+  background-color: #0056b3;
+}
+/* Home my style comfiguration end*/
+
+/*About me my style configuration initial */
+.profile-image {
+  max-width: 100%;
+  height: auto;
+}
+/*About me my style configuration end */
+
+/* Projects my style configuration initial */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -60,94 +137,9 @@ a {
   margin-bottom: 10px;
 }
 
-.top-header {
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-}
+/* Projects my style configuration end */
 
-.social-links {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.social-links img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.social-links img:hover {
-  transform: scale(1.2);
-}
-/* Home */
-/* backgropund home color*/
-body.home-page {
-  background-color: #b6c5d0;
-  margin: 0;
-  font-family: "Poppins", nourd;
-}
-.name { /*Fabiana Correa*/
-  font-size: 3.8rem;
-  font-weight: bold;
-  margin: 5px 0;
-  font-family: "Arial Black", sans-serif;
-  }
-
-.title { /*Job title*/
-  font-size: 1.9rem;
-  color: #555;
-  font-family: "Poppins", nourd;
-}
-.profile-photo {
-  width: 210px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.career-summary { 
-  max-width: 900px;
-  margin: 3% auto;
-  text-align: left;
-  line-height: 1.6;
-  font-size: 1.3rem;
-}
-.career-summary h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-.nav-buttons {
-  text-align: center;
-  margin-top: 30px;
-}
-.nav-buttons button {
-  margin: 5px;
-  padding: 8px 18px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.nav-buttons button:hover {
-  background-color: #0056b3;
-}
-
-/*About me*/
-.profile-image {
-  max-width: 100%;
-  height: auto;
-}
-
-
+/* Contact me my style configuration initial */
 
 
 .contact-section {
@@ -222,8 +214,57 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
+/* Contact me my style configuration end */
 
-/* Responsivo */
+/*footer configuration and styles*/
+
+.site-footer {
+  /*background-color: #f5f5f5;*/
+  background-color: #b6c5d0;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-links img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+.footer-links img:hover {
+  transform: scale(1.2);
+}
+
+.footer-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0 0 0;
+}
+
+
+/* Responsive */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -231,5 +272,7 @@ button[type="submit"]:hover {
 }
 
 
-
-
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}

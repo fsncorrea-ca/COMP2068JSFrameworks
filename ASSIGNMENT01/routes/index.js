@@ -6,13 +6,16 @@ router.get('/', function(req, res, next) {
     res.render('home', { title: 'Home', 
         heading: 'Welcome to my Portfolio' });
 });
+// GET about page.
 router.get('/about', function(req, res, next) {
     res.render("about", {title: "About me"});
 });
+// GET projects page.
 router.get('/projects', function(req, res, next) {
 
     res.render("projects", {title: "Projects"});
 });
+// GET contact page.
 router.get('/contact', function(req, res, next) {
     res.render("contact", {title: "Contact me"});
 });
