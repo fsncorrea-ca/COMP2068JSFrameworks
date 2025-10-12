@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@600&display=swap');
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -24,7 +27,6 @@ a {
   background-color: #f9f9f9;
   padding: 10px;
 }
-
 
 
 .projects-grid {
@@ -82,46 +84,49 @@ a {
 .social-links img:hover {
   transform: scale(1.2);
 }
-
-.name {
-  font-size: 1.8rem;
+/* Home */
+/* backgropund home color*/
+body.home-page {
+  background-color: #b6c5d0;
+  margin: 0;
+  font-family: "Poppins", nourd;
+}
+.name { /*Fabiana Correa*/
+  font-size: 3.8rem;
   font-weight: bold;
   margin: 5px 0;
-}
+  font-family: "Arial Black", sans-serif;
+  }
 
-.title {
-  font-size: 1.1rem;
+.title { /*Job title*/
+  font-size: 1.9rem;
   color: #555;
+  font-family: "Poppins", nourd;
 }
-
 .profile-photo {
-  width: 180px;
-  height: 180px;
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   border-radius: 50%;
   margin: 15px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
-.career-summary {
-  max-width: 800px;
-  margin: 30px auto;
+.career-summary { 
+  max-width: 900px;
+  margin: 3% auto;
   text-align: left;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
-
 .career-summary h2 {
   text-align: center;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
-
 .nav-buttons {
   text-align: center;
   margin-top: 30px;
 }
-
 .nav-buttons button {
   margin: 5px;
   padding: 8px 18px;
@@ -132,10 +137,18 @@ a {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .nav-buttons button:hover {
   background-color: #0056b3;
 }
+
+/*About me*/
+.profile-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
 
 .contact-section {
   max-width: 900px;
@@ -143,13 +156,11 @@ a {
   padding: 30px;
   text-align: center;
 }
-
 .contact-section h1 {
   font-size: 2.2rem;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 .contact-section .subtitle {
   color: #777;
   font-size: 1.1rem;
@@ -218,16 +229,7 @@ button[type="submit"]:hover {
     flex-direction: column;
   }
 }
-/*image about me*/
-.profile-image {
-  max-width: 100%;
-  height: auto;
-}
 
-/* backgropund home color*/
-body.home-page {
-  background-color: #b6c5d0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-}
+
+
 
