@@ -1,2 +1,37 @@
-<h1>{{title}}</h1>
-<p>test home {{title}}</p>
+<header class="top-header">
+  <div class="social-links">
+    <a href="https://linkedin.com/in/fabiana-correa-53322127" target="_blank" title="LinkedIn">
+      <img src="/images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/fsncorrea-ca" target="_blank" title="GitHub">
+      <img src="/images/github.png" alt="GitHub">
+    </a>
+    <a href="mailto:Fabiana.SouzaDeNobregaCorrea@MyGeorgian.ca" title="Email">
+      <img src="/images/email.png" alt="Email">
+    </a>
+  </div>
+
+  <h1>{{heading}}</h1>
+  <p class="name">Fabiana Correa</p>
+  <p class="title">SPECIALIST SAP MM LEADER </p>
+  <img src="/images/fabiana.png" alt="Fabiana Correa" class="profile-photo">
+</header>
+
+<section class="career-summary">
+  <h2>Career Summary</h2>
+  <p>SAP MM Specialist with over 17 years of international experience across the full project lifecycle – from blueprinting, design, configuration, testing, and go-live to post-implementation support and AMS services. Extensive background in SAP ECC and S/4HANA implementations, rollouts, and upgrades, with a proven ability to optimize procurement, inventory, and logistics processes while ensuring regulatory compliance. Experienced in incident and problem management (ServiceNow), driving continuous improvement and process automation. Recognized for leading cross-functional teams, engaging stakeholders, and delivering business value in complex, global environments.</p>
+  </section>
+
+{{#if notFound}}
+  <div class="alert alert-warning">Page not found</div>
+{{/if}}
+
+
+<nav class="nav-buttons">
+  <a href="/"><button>Home</button></a>
+  <a href="/about"><button>About</button></a>
+  <a href="/projects"><button>Projects</button></a>
+  <a href="/contact"><button>Contact</button></a>
+</nav>
+
+

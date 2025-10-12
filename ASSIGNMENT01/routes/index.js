@@ -3,12 +3,14 @@ var router = express.Router();
 
 // GET home page.
 router.get('/', function(req, res, next) {
-    res.render('home', { title: 'Home' });
+    res.render('home', { title: 'Home', 
+        heading: 'Welcome to my Portfolio' });
 });
 router.get('/about', function(req, res, next) {
     res.render("about", {title: "About me"});
 });
 router.get('/projects', function(req, res, next) {
+
     res.render("projects", {title: "Projects"});
 });
 router.get('/contact', function(req, res, next) {
