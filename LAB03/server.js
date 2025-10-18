@@ -22,19 +22,19 @@ function calculate(req, res, next) {
     let symbol;
 // Perform the requested operation
     switch (method) {
-      case 'add':
+      case 'add':// Addition
         result = x + y;
         symbol = '+';
         break;
-      case 'subtract':
+      case 'subtract':// Subtraction
         result = x - y;
         symbol = '-';
         break;
-      case 'multiply':
+      case 'multiply':// Multiplication
         result = x * y;
         symbol = '*';
         break;
-      case 'divide':
+      case 'divide':// Division
         if (y === 0) {
           res.end('Error: Cannot divide by zero.');
           return;
@@ -43,7 +43,7 @@ function calculate(req, res, next) {
         symbol = '/';
         break;
       default:
-        res.end('Error: Invalid method. Use add, subtract, multiply, or divide.');
+        res.end('Error: Invalid method. Use add, subtract, multiply, or divide.');// Invalid method
         return;
     }
 // Send the result back to the client
@@ -56,7 +56,7 @@ function calculate(req, res, next) {
 // Create the server and use the calculate middleware
 const app = connect();
 app.use(calculate);
-
+// Start the server
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
