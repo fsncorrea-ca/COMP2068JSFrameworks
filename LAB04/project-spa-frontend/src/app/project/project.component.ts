@@ -5,7 +5,7 @@ import { ProjectService } from '../services/project.service';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrl: './project.component.css',
+  styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent {
   projects: any; // variable to store the projects data for the UI
