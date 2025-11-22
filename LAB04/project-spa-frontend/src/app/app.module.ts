@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
 import { ProjectComponent } from './project/project.component';
 
@@ -13,16 +13,16 @@ import { ProjectService } from './services/project.service';
 
 // Import the FormsModule so we can bind input fields with component variables
 import { FormsModule } from '@angular/forms';
-import { App } from './app/app';
-import { AppRoot } from './app-root/app-root';
+//import { App } from './app/app';
+/*import { AppRoot } from './app-root/app-root';*/
 import { Project } from './project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectComponent,
-    App,
-    AppRoot,
+    //App,
+    //AppRoot,
     Project
   ],
   imports: [

@@ -3,9 +3,9 @@ import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-project',
-  standalone: false,
+  //standalone: false,
   templateUrl: './project.component.html',
-  styleUrl: './project.component.css',
+  styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit {
   projects: any[] = [];

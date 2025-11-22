@@ -2,10 +2,10 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.html',
-  standalone: false,
-  styleUrl: './app.css'
+  templateUrl: './app.component.html',
+  //standalone: false,
+  styleUrl: './app.component.css'
 })
-export class App {
+export class AppComponent {
   protected readonly title = signal('project-spa-frontend');
 }
