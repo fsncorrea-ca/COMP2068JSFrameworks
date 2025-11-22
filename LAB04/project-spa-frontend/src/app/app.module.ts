@@ -13,11 +13,17 @@ import { ProjectService } from './services/project.service';
 
 // Import the FormsModule so we can bind input fields with component variables
 import { FormsModule } from '@angular/forms';
+import { App } from './app/app';
+import { AppRoot } from './app-root/app-root';
+import { Project } from './project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectComponent
+    ProjectComponent,
+    App,
+    AppRoot,
+    Project
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,13 @@
-import { Injectable } from '@angular/core';
-// Import the HTTP client module to make HTTP requests
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class ProjectService {
-  // Use Dependency Injection to get the HTTP client instance
-  // This is what was declared in the imports list in the app.module.ts file
-  constructor(private http: HttpClient) {}
+  private apiUrl = 'http://localhost:3000/projects';
 
-  // Method to get all projects from the backend
+  constructor(private http: HttpClient) { }
+
   getProjects() {
-    // Make a GET request to the backend to get all projects
-    return this.http.get('http://localhost:3000/api/projects');
+    return this.http.get(this.apiUrl);
   }
 }

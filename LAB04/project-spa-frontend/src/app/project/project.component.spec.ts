@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectComponent } from './project.component';
 
-describe('ProjectComponent', () => {
+describe('Project', () => {
   let component: ProjectComponent;
   let fixture: ComponentFixture<ProjectComponent>;
 
@@ -14,7 +14,7 @@ describe('ProjectComponent', () => {
 
     fixture = TestBed.createComponent(ProjectComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

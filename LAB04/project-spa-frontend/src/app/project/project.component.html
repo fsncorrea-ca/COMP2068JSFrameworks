@@ -9,12 +9,10 @@
   </thead>
   <tbody>
     <!-- Syntax uses 'of' instead of 'in' -->
-    @for (project of projects; track project) {
-      <tr>
-        <td>{{ project.name }}</td>
-        <td>{{ project.dueDate | date }}</td>
-        <td>{{ project.course }}</td>
-      </tr>
-    }
+    <tr *ngFor="let project of projects">
+      <td>{{ project.name }}</td>
+      <td>{{ project.dueDate | date }}</td>
+      <td>{{ project.course }}</td>
+    </tr>
   </tbody>
 </table>
