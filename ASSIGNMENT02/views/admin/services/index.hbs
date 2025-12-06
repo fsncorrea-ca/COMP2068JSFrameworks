@@ -1,0 +1,29 @@
+<h1 class="mb-3">Manage Services</h1>
+
+<a href="/admin/services/new" class="btn btn-success mb-3">Add Service</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Tags</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each services}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.durationMins}} min</td>
+        <td>${{this.basePrice}}</td>
+        <td>{{this.tags}}</td>
+        <td class="text-end">
+          <a href="/admin/services/{{this._id}}/edit" class="btn btn-sm btn-primary">Edit</a>
+          <a href="/admin/services/{{this._id}}/delete" class="btn btn-sm btn-outline-danger">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

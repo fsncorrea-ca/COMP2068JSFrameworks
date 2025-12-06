@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Serenity Spa</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/therapists">Therapists</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        {{#if user}}
+          <li class="nav-item"><a class="nav-link" href="/admin/services">Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/therapists">Admin Therapists</a></li>
+          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+        {{else}}
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

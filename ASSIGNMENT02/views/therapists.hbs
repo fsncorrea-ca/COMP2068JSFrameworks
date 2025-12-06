@@ -1,0 +1,33 @@
+<h1 class="mb-4">Meet Our Therapists</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  {{#each therapists}}
+  <div class="col">
+    <div class="card h-100">
+
+      {{#if this.photoUrl}}
+      <img src="{{this.photoUrl}}" class="card-img-top" alt="{{this.name}}">
+      {{/if}}
+
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+
+        {{#if this.specialties}}
+        <p><strong>Specialties:</strong> {{this.specialties}}</p>
+        {{/if}}
+
+        <p class="card-text">
+          {{this.bio}}
+        </p>
+
+        <p class="text-muted">
+          {{this.yearsExperience}} year{{#unless (eq this.yearsExperience 1)}}s{{/unless}} of experience
+        </p>
+      </div>
+
+    </div>
+  </div>
+  {{/each}}
+
+</div>

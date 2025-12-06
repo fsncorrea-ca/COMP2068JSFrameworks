@@ -1,0 +1,9 @@
+<h1 class="mb-3">Delete Service</h1>
+
+<p>Are you sure you want to delete the service <strong>{{service.name}}</strong>?</p>
+
+<form method="post" action="/admin/services/{{service._id}}/delete">
+  <input type="hidden" name="_method" value="DELETE">
+  <button class="btn btn-danger">Yes, delete</button>
+  <a href="/admin/services" class="btn btn-secondary ms-2">Cancel</a>
+</form>

@@ -1,0 +1,11 @@
+<h1>Delete Therapist</h1>
+
+<p>
+  Are you sure you want to delete <strong>{{therapist.name}}</strong>?
+</p>
+
+<form method="post" action="/admin/therapists/{{therapist._id}}/delete">
+  <input type="hidden" name="_method" value="DELETE">
+  <button class="btn btn-danger">Yes, delete</button>
+  <a href="/admin/therapists" class="btn btn-secondary ms-2">Cancel</a>
+</form>

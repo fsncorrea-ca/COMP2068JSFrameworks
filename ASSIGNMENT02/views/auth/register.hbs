@@ -1,0 +1,21 @@
+<h1 class="mb-3">Register</h1>
+
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}}
+
+<form method="post" action="/register" class="col-md-4">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input name="displayName" class="form-control" value="{{displayName}}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input name="email" type="email" class="form-control" value="{{email}}" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input name="password" type="password" class="form-control" required>
+  </div>
+  <button class="btn btn-primary">Create Account</button>
+</form>

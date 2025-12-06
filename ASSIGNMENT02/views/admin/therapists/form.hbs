@@ -1,0 +1,36 @@
+<h1>{{#if therapist._id}}Edit Therapist{{else}}New Therapist{{/if}}</h1>
+
+<form method="post" action="{{#if therapist._id}}/admin/therapists/{{therapist._id}}{{else}}/admin/therapists{{/if}}" class="col-md-6">
+
+  {{#if therapist._id}}
+  <input type="hidden" name="_method" value="PUT">
+  {{/if}}
+
+  <div class="mb-3">
+    <label>Name</label>
+    <input name="name" class="form-control" value="{{therapist.name}}" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Photo URL</label>
+    <input name="photoUrl" class="form-control" value="{{therapist.photoUrl}}">
+  </div>
+
+  <div class="mb-3">
+    <label>Specialties (comma separated)</label>
+    <input name="specialties" class="form-control" value="{{therapist.specialties}}">
+  </div>
+
+  <div class="mb-3">
+    <label>Years of Experience</label>
+    <input name="yearsExperience" class="form-control" type="number" value="{{therapist.yearsExperience}}">
+  </div>
+
+  <div class="mb-3">
+    <label>Bio</label>
+    <textarea name="bio" rows="4" class="form-control">{{therapist.bio}}</textarea>
+  </div>
+
+  <button class="btn btn-primary">Save</button>
+  <a href="/admin/therapists" class="btn btn-secondary ms-2">Cancel</a>
+</form>

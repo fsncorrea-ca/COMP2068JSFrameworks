@@ -1,0 +1,47 @@
+<h1 class="mb-3">
+  {{#if service._id}}Edit Service{{else}}New Service{{/if}}
+</h1>
+
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}}
+
+<form method="post" action="{{#if service._id}}/admin/services/{{service._id}}{{else}}/admin/services{{/if}}" class="col-md-6">
+  {{#if service._id}}
+    <input type="hidden" name="_method" value="PUT">
+  {{/if}}
+
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input name="name" class="form-control" value="{{service.name}}" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Slug</label>
+    <input name="slug" class="form-control" value="{{service.slug}}">
+    <div class="form-text">Short URL id (e.g., swedish-massage)</div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="description" class="form-control" rows="3">{{service.description}}</textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Duration (minutes)</label>
+    <input name="durationMins" type="number" class="form-control" value="{{service.durationMins}}">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Base Price</label>
+    <input name="basePrice" type="number" step="0.01" class="form-control" value="{{service.basePrice}}">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Tags (comma separated)</label>
+    <input name="tags" class="form-control" value="{{service.tags}}">
+  </div>
+
+  <button class="btn btn-primary">Save</button>
+  <a href="/admin/services" class="btn btn-secondary ms-2">Cancel</a>
+</form>

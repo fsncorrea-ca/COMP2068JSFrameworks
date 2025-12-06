@@ -1,8 +1,266 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* ===========================
+   GLOBAL
+   =========================== */
+
+:root {
+  --primary: #1a7b78;      /* verde/teal principal */
+  --primary-dark: #11514f;
+  --accent: #a6d5cb;       /* verde clarinho/accent */
+  --bg: #f5f7f8;           /* fundo de página */
+  --text: #1f2933;
+  --muted: #6b7280;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links e botões “brand” */
+
 a {
-  color: #00B7FF;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* ===========================
+   HEADER / NAVBAR
+   =========================== */
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+/* Link “Admin / Logout / Login” no canto direito */
+.navbar-nav.ms-auto .nav-link {
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   HERO (HOME)
+   =========================== */
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* coloque uma imagem suave de spa aqui */
+  background-image: linear-gradient(
+      rgba(17, 81, 79, 0.75),
+      rgba(17, 81, 79, 0.85)
+    ),
+    url("/images/spa-hero.jpg");
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  color: #e5f2f1;
+}
+
+/* ===========================
+   SEÇÕES / CONTEÚDO
+   =========================== */
+
+main.container {
+  max-width: 1040px;
+}
+
+/* Seções gerais (services, therapists, etc.) */
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   CARDS – SERVICES & THERAPISTS
+   =========================== */
+
+.service-card,
+.therapist-card {
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.service-card:hover,
+.therapist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.service-card .card-body,
+.therapist-card .card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.service-card .card-title,
+.therapist-card .card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+/* Foto do terapeuta */
+
+.therapist-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   TABELAS (área admin)
+   =========================== */
+
+.table {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #f1f5f9;
+}
+
+.table thead th {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+/* ===========================
+   FORMULÁRIOS
+   =========================== */
+
+form {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+  margin-top: 3rem;
+  padding: 1.25rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+  }
+}
+.services-page {
+  background-color: #f4fbf9; 
+  padding: 2rem;
+  min-height: 100vh; 
+  border-radius: 12px;
 }
